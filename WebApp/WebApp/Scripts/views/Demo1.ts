@@ -11,12 +11,16 @@ var tmp = clickToEdit;
 export class Demo1ViewModel {
     FirstName = ko.observable<string>();
 
+    LastName = ko.observable<string>();
+
     Submit() {
-        var name = this.FirstName();
-        if (name)
-            alert("Hello " + this.FirstName());
+        var fname = this.FirstName();
+        var sname = this.LastName();
+
+        if (fname && sname)
+            alert("Hello " + fname + " " + sname);
         else
-            alert("Please provide a name");
+            alert("Please provide a first and last name");
     }
 }
 

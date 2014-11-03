@@ -5,12 +5,14 @@
 
 <p>This demonstrates a simple viewmodel bound with Knockout, and uses a Knockout component to handle editing of the values.</p>
 <form role="form">
-    <label>First Name:</label>
-    <input type="text" class="form-control" placeholder="" data-bind="value: FirstName" />
 
     <label>First Name:</label>
     <div class="form-group">
         <click-to-edit params="value: FirstName"></click-to-edit>
+    </div>
+    <label>Last Name:</label>
+    <div class="form-group">
+        <click-to-edit params="value: LastName"></click-to-edit>
     </div>
     <hr />
 
@@ -19,7 +21,7 @@
 
 @* echo the value to show databinding working *@
 <p class="help-block">
-    Current value: {<span data-bind="text: FirstName"></span>}
+    Current value: {<span data-bind="text: FirstName"></span> <span data-bind="text: LastName"></span>}
 </p>
 
 @section scripts {
