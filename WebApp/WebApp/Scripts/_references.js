@@ -9,3 +9,4 @@
 /// <reference path="require.js" />
 /// <reference path="r.js" />
 /// <reference path="text.js" />
+/// <reference path="knockout-3.2.0.js" />
