@@ -15,8 +15,15 @@ namespace WebApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        /// <summary>
+        /// First KO component demo
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Demo1()
+        {
             return View();
         }
     }

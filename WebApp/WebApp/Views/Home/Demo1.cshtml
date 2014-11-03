@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Demo 1";
+}
+<h2>Demo 1</h2>
+
+<p>This demonstrates a simple viewmodel bound with Knockout, and uses a Knockout component to handle editing of the values.</p>
+<form role="form">
+    <label>First Name:</label>
+    <input type="text" class="form-control" placeholder="" data-bind="value: FirstName" />
+    @* echo the value to show databinding working *@
+    <p class="help-block">
+        Entered: {<span data-bind="text: FirstName"></span>}
+    </p>
+    <button data-bind="click: Submit">Submit</button>
+</form>
+
+@section scripts {
+    <script>
+        require(["views/Demo1"]);
+    </script>
+}
