@@ -7,12 +7,20 @@
 <form role="form">
     <label>First Name:</label>
     <input type="text" class="form-control" placeholder="" data-bind="value: FirstName" />
-    @* echo the value to show databinding working *@
-    <p class="help-block">
-        Entered: {<span data-bind="text: FirstName"></span>}
-    </p>
+
+    <label>First Name:</label>
+    <div class="form-group">
+        <click-to-edit params="value: FirstName"></click-to-edit>
+    </div>
+    <hr />
+
     <button data-bind="click: Submit">Submit</button>
 </form>
+
+@* echo the value to show databinding working *@
+<p class="help-block">
+    Current value: {<span data-bind="text: FirstName"></span>}
+</p>
 
 @section scripts {
     <script>

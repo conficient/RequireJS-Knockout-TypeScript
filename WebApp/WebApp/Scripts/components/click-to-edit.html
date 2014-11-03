@@ -1,0 +1,10 @@
+﻿<!-- HTML template for component -->
+<span data-bind="visible: viewMode, click: Edit">
+    <span data-bind="text: value"></span>
+    &nbsp;&nbsp;<small class="text-muted">[click to edit]</small>
+</span>
+<span data-bind="visible: !viewMode()">
+    <input class="form-control" type="text" data-bind="value: newValue" />
+    <button class="btn btn-sm btn-primary" data-bind="click: Save">save</button>
+    <button class="btn btn-default" data-bind="click: Cancel">cancel</button>
+</span>
